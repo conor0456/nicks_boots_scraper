@@ -8,5 +8,5 @@ print("Fetched matches: " + json.dumps(matches))
 new_boots = persister.get_new_entries(matches)
 print("New boots: " + json.dumps(new_boots))
 if len(new_boots) > 0:
-	twilio_client.send_message(new_boots)
+	twilio_client.notify(new_boots)
 print("All done!")
